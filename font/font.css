@@ -1,0 +1,30 @@
+@font-face {
+font-family: 'Alice';
+src: url('Alice.eot');
+src: url('Alice.eot?iefix') format('eot'),
+url('Alice.woff') format('woff'),
+url('Alice.ttf') format('truetype'),
+url('Alice.svg#webfont') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'RuslanDisplay';
+src: url('RuslanDisplay.eot');
+src: url('RuslanDisplay.eot?iefix') format('eot'),
+url('RuslanDisplay.woff') format('woff'),
+url('RuslanDisplay.ttf') format('truetype'),
+url('RuslanDisplay.svg#webfont') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Pattaya-Regular';
+src: url('Pattaya-Regular.eot');
+src: url('Pattaya-Regular.eot?iefix') format('eot'),
+url('Pattaya-Regular.woff') format('woff'),
+url('Pattaya-Regular.ttf') format('truetype'),
+url('Pattaya-Regular.svg#webfont') format('svg');
+font-weight: normal;
+font-style: normal;
+}

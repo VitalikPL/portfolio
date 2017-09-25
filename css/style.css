@@ -1,0 +1,186 @@
+* {
+  font-family: Arial, Sans-Serif;
+  margin: 0;
+}
+
+body {
+  background: url(../img/diagonal_fabric.png);
+}
+
+.page {
+  width: 980px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+hr.line {
+  margin: 50px 300px;
+  padding: 0;
+  border: none;
+  border-top: medium double #D0D0D0;
+  color: #D0D0D0;
+  text-align: center;
+}
+
+hr.line:after {
+  content: 'Y';
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: #fff;
+}
+
+/* HEADER BEGIN */
+.header {
+  width: 100%;
+}
+.header__nav {
+  background: url(../img/dirty_old_shirt.png);
+}
+
+.topnav {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+}
+.topnav__icon {
+  display: none;
+  color: #e0e0e0;
+}
+.topnav__li {
+  float: left;
+}
+
+.fa-gg {
+  color: #666;
+  padding-right: 5px;
+}
+
+.topnav__li_a {
+  display: inline-block;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 16px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.topnav__li_a:hover {
+  background-color: #555;
+  color: #fff;
+  transition: 1s;
+}
+
+@media screen and (max-width: 620px) {
+  .responsive {
+    position: relative;
+  }
+
+  .topnav__li {
+    display: none;
+  }
+
+  .topnav__icon {
+    display: inline-block;
+  }
+
+  .fa-gg {
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 620px) {
+  .responsive .topnav__li {
+    float: none;
+    display: inline;
+  }
+
+  .topnav__li_a {
+    display: block;
+    text-align: left;
+  }
+
+  .topnav__li_a:hover {
+    letter-spacing: 2px;
+  }
+}
+@keyframes color {
+  0% {
+    color: snow;
+  }
+  50% {
+    color: #404B9A;
+  }
+  100% {
+    color: snow;
+  }
+}
+/* HEADER END */
+.foto {
+  width: 100%;
+  height: 600px;
+  background: url(../img/foto.jpg) center center no-repeat;
+  text-align: center;
+}
+.foto__saitportfolio {
+  padding-top: 50px;
+}
+.foto__h1text, .spanhtml {
+  letter-spacing: 10px;
+  font-size: 56px;
+  font-family: "Alice", Arial, Sans-Serif;
+  text-shadow: 2px 2px 3px grey;
+}
+
+.saitportfolio, .myname {
+  font-family: "Alice", Arial, Sans-Serif;
+  letter-spacing: 5px;
+  font-size: 32px;
+  line-height: 100px;
+  color: snow;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.spanhtml {
+  animation: color 5s ease-in-out infinite;
+}
+
+.fa-chevron-down {
+  margin-top: 220px;
+  text-shadow: 1px 1px 1px #000;
+  animation: color 5s ease-in-out infinite;
+}
+
+.Aboutme {
+  width: 100%;
+}
+.Aboutme__h2text {
+  padding-top: 80px;
+}
+.Aboutme__ptext {
+  padding: 0 40px;
+}
+
+.h2text {
+  font-family: "RuslanDisplay", Arial, Sans-Serif;
+  color: #404B9A;
+  letter-spacing: 2px;
+  font-size: 42px;
+  text-align: center;
+}
+
+.ptext, .ptext__span {
+  line-height: 25px;
+  font-family: "Alice", Arial, Sans-Serif;
+  text-align: center;
+  color: #555;
+  font-size: 18px;
+}
+.ptext__span {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */
