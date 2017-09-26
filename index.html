@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="icon/css/font-awesome.css">
 </head>
 <body>
+	<div class="header_shadow"></div>
 	<div class="page">
 		<header class="header">
 			<nav class="header__nav nav">
@@ -16,11 +17,11 @@
 						<a class="topnav__li_a" href="javascript:void(0);" onclick="myFunction()"><i class="fa fa-bars" aria-hidden="true"></i></a>
 					</li>
 					<li class="topnav__li">
-						<a class="topnav__li_a" href="#">Немного о себе</a>
+						<a class="topnav__li_a" href="#AbountMe">Немного о себе</a>
 						<i class="fa fa-gg" aria-hidden="true"></i>
 					</li>
 					<li class="topnav__li">
-						<a class="topnav__li_a" href="#">Знания и умения</a>
+						<a class="topnav__li_a" href="#mySkilss">Знания и умения</a>
 						<i class="fa fa-gg" aria-hidden="true"></i>
 					</li>
 					<li class="topnav__li">
@@ -33,23 +34,85 @@
 				</ul>
 			</nav>
 		</header>
-			<div class="foto">
-				<div class="foto__saitportfolio saitportfolio">Сайт-портфолио</div>
-				<h1 class="foto__h1text"><span class="spanhtml">HTML</span>-Верстальщика</h1>
-				<div class="foto__myname myname">Пилипчука Виталия</div>
-				<i class="fa fa-chevron-down fa-2x" aria-hidden="true"></i>
+		<div class="foto">
+			<div class="foto__saitportfolio saitportfolio">Сайт-портфолио</div>
+			<h1 class="foto__h1text"><span class="spanhtml">HTML</span>-Верстальщика</h1>
+			<div class="foto__myname myname">Пилипчука Виталия</div>
+			 <a href="#AbountMe"><i class="fa fa-chevron-down fa-2x" aria-hidden="true"></i></a>
+		</div>
+		<section class="Aboutme">
+			<h2 class="Aboutme__h2text h2text" id="AbountMe">НЕМНОГО О СЕБЕ</h2>
+			<hr class="line">
+			<p class="Aboutme__ptext ptext">Здравствуйте! Меня зовут Виталий. Я начинающий HTML-верстальщик. Хотя я нахожусь только в самом начале своего профессионального становления в данной специальности, я уже овладел и уверенно пользуюсь всеми необходимыми в моей работе технологиями. <span class="ptext__span">Моя цель - совершенствование своих профессиональных навыков, посредством применяя полученых знаний на практике,</span> отличаюсь отвецтвенностью и целеустремленностью.</p>
+			<br>
+			<p class="Aboutme__ptext ptext">На моем сайте вы найдете всю нужную для вас информацию и можете посмотреть примеры моих работ.</p>
+		</section>
+		<section>
+			<h2 class="h2text h2text__margin" id="mySkilss">Знания и умения</h2>
+			<hr class="line">
+			<div class="skills">
+				<div class="skills__blocks blocks">
+					<div class="blocks__skillsimg skillsimg1"></div>
+					<h3 class="blocks__h2">HTML</h3>
+					<p class="blocks__p">Уверенное знание HTML, валидная, семантическая верстка</p>
+				</div>
+				<div class="skills__blocks blocks">
+					<div class="blocks__skillsimg skillsimg2"></div>
+					<h3 class="blocks__h2">CSS</h3>
+					<p class="blocks__p">Уверенное знание CSS, основных способов верстки, сильных и слабых сторон</p>
+				</div>
+				<div class="skills__blocks blocks">
+					<div class="blocks__skillsimg skillsimg3"></div>
+					<h3 class="blocks__h2">Кросбраузерность</h3>
+					<p class="blocks__p">Кроссбраузерная верстка без сомнительных хаков и скриптов. Понимание особенностей работы браузеров и знание их возможностей</p>
+				</div>
+				<div class="skills__blocks blocks">
+					<div class="blocks__skillsimg skillsimg4"></div>
+					<h3 class="blocks__h2">БЭМ</h3>
+					<p class="blocks__p">Пользуюсь методологией БЭМ для именования селекторов, такой подход к веб-разработке позволяет получить гибкий, легко изменяемый код</p>
+				</div>
+				<div class="skills__blocks blocks">
+					<div class="blocks__skillsimg skillsimg5"></div>
+					<h3 class="blocks__h2">Gulp</h3>
+					<p class="blocks__p">Владею инструментом автоматизации Gulp, который помогает автоматизировать рутинные задачи веб-разработки</p>
+				</div>
+				<div class="skills__blocks blocks">
+					<div class="blocks__skillsimg skillsimg6"></div>
+					<h3 class="blocks__h2">Sass</h3>
+					<p class="blocks__p">Умение работать с препроцессором Sass значительно учкоряет работу по написанию стилевых файлов</p>
+				</div>
+				<div class="skills__blocks blocks">
+					<div class="blocks__skillsimg skillsimg7"></div>
+					<h3 class="blocks__h2">Less</h3>
+					<p class="blocks__p">Имею опыт работы с препроцессором Less</p>
+				</div>
+				<div class="skills__blocks blocks">
+					<div class="blocks__skillsimg skillsimg8"></div>
+					<h3 class="blocks__h2">Photoshop</h3>
+					<p class="blocks__p">Владение Photoshop на уровне, необходимом для верстки</p>
+				</div>
+				<div class="skills__blocks blocks">
+					<div class="blocks__skillsimg skillsimg9"></div>
+					<h3 class="blocks__h2">Git</h3>
+					<p class="blocks__p">Опыт работы с системой контроля версий(Git)</p>
+				</div>
+				<div class="skills__blocks blocks">
+					<div class="blocks__skillsimg skillsimg10"></div>
+					<h3 class="blocks__h2">JavaScript</h3>
+					<p class="blocks__p">Имею общее представление о JavaScript, могу написать простейщий код на js</p>
+				</div>
+				<div class="skills__blocks blocks">
+					<div class="blocks__skillsimg skillsimg11"></div>
+					<h3 class="blocks__h2">Адаптивная верстка</h3>
+					<p class="blocks__p">Качественное создание адаптивных сайтов с максимальной точностью отображения как на мобильных устройствах, так и на экране компьютера</p>
+				</div>
+				<div class="skills__blocks blocks">
+					<div class="blocks__skillsimg skillsimg12"></div>
+					<h3 class="blocks__h2">Bootstrap</h3>
+					<p class="blocks__p">Пользуюсь фреймворком для создания современных, кросс-браузернных и стандартизованных интерфейсов</p>
+				</div>
 			</div>
-			<section class="Aboutme">
-				<h2 class="Aboutme__h2text h2text">НЕМНОГО О СЕБЕ</h2>
-				<hr class="line">
-				<p class="Aboutme__ptext ptext">Здравствуйте! Меня зовут Виталий. Я начинающий HTML-верстальщик. Хотя я нахожусь только в самом начале своего профессионального становления в данной специальности, я уже овладел и уверенно пользуюсь всеми необходимыми в моей работе технологиями.<span class="ptext__span">Моя цель - совершенствование своих профессиональных навыков, посредством применяя полученых знаний на практике,</span> отличаюсь отвецтвенностью и целеустремленностью.</p>
-				<br>
-				<p class="Aboutme__ptext ptext">На моем сайте вы найдете всю нужную для вас информацию и можете посмотреть примеры моих работ.</p>
-			</section>
-			<section class="skills">
-				<h2 class="h2text">Знания и умения</h2>
-				<hr class="line">
-			</section>
+		</section>
 	</div>
 
 	<script src="js/script.js"></script>

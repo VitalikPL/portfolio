@@ -28,13 +28,20 @@ hr.line:after {
 	background: #fff;
 }
 /* HEADER BEGIN */
+.header_shadow {
+	width: 100%;
+	height: 50px;
+	background: url(../img/pw_maze_black.png);
+	position: absolute;
+}
 .header {
 	width: 100%;
 	&__nav {
-		background: url(../img/dirty_old_shirt.png);
+		background: url(../img/pw_maze_black.png);
 	}
 }
 .topnav {
+	position: absolute;
 	list-style-type: none;
 	padding: 0;
 	overflow: hidden;
@@ -58,50 +65,12 @@ hr.line:after {
 	text-decoration: none;
 	transition: 0.3s;
 	font-size: 16px; 
-	text-shadow: 1px 1px 2px #000;
+	text-shadow: 1px 1px 1px #000;
 }
 .topnav__li_a:hover {
-	background-color: #555;
+	background-color: #404B9A;
 	color: #fff;
 	transition: 1s;
-}
-@media screen and (max-width: 620px) {
-	.responsive {
-		position: relative;
-	}
-	.topnav__li {
-		display: none;
-	}
-	.topnav__icon {
-		display: inline-block;
-	}
-	.fa-gg {
-		opacity: 0;
-	}
-}
-@media screen and (max-width: 620px) {
-	.responsive .topnav__li {
-		float: none;
-		display: inline;
-	}
-	.topnav__li_a {
-		display: block;
-		text-align: left;
-	}
-	.topnav__li_a:hover {
-		letter-spacing: 2px;
-	}
-}
-@keyframes color {
-	0% {
-		color: snow;
-	}
-	50% {
-		color: #404B9A;
-	}
-	100% {
-		color: snow;
-	}
 }
 /* HEADER END */
 .foto {
@@ -142,7 +111,7 @@ hr.line:after {
 .Aboutme {
 	width: 100%;
 	&__h2text {
-		padding-top: 80px;
+		padding-top: 100px;
 	}
 	&__ptext {
 		padding: 0 40px;
@@ -154,15 +123,152 @@ hr.line:after {
 	letter-spacing: 2px;
 	font-size: 42px;
 	text-align: center;
+	&__margin {
+		margin-top: 100px;
+	}
 }
 .ptext {
 	line-height: 25px;
 	font-family: "Alice", Arial, Sans-Serif;
 	text-align: center;
 	color: #555;
-	font-size: 18px;
+	font-size: 20px;
 	&__span {
 		font-weight: bold;
+		color: #333;
 		@extend .ptext
+	}
+}
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 50px 0;
+	&__blocks {
+		width: 200px;
+	}
+}
+.blocks {
+		text-align: center;
+		&__h2 {
+			font-family: "Pattaya-Regular", Arial, Sans-Serif;
+			margin: 10px;
+			letter-spacing: 2px;
+		}
+		&__p {
+			color: #555;		}
+}
+/* Skills */
+.blocks__skillsimg {
+	width: 100px;
+	height: 100px;
+	margin: 10px 50px;
+}
+.skillsimg1 {
+  	background: url(../img/html5.png);
+}
+.skillsimg2 {
+	background: url(../img/css3.png);
+}
+.skillsimg3 {
+	background: url(../img/browser.png);
+}
+.skillsimg4 {
+	background: url(../img/bem.png);
+}
+.skillsimg5 {
+	background: url(../img/gulp.png);
+}
+.skillsimg6 {
+	background: url(../img/sass.png);
+}
+.skillsimg7 {
+	background: url(../img/less.png);
+}
+.skillsimg8 {
+	background: url(../img/ps.png);
+}
+.skillsimg9 {
+	background: url(../img/git.png);
+}
+.skillsimg10 {
+	background: url(../img/js.png);
+}
+.skillsimg11 {
+	background: url(../img/adapt.png);
+}
+.skillsimg12 {
+	background: url(../img/bootstrap.png);
+}
+/* MEDIA */
+@media screen and (max-width: 980px) {
+	.page {
+		width: 604px;
+	}
+	.foto__h1text, .saitportfolio, .myname {
+		font-size: 42px;
+	}
+	hr.line {
+		margin: 50px 160px;
+	}
+}
+@media screen and (max-width: 624px) {
+	.page {
+		width: 460px;
+	}
+	.responsive {
+		position: relative;
+	}
+	.topnav__li {
+		display: none;
+	}
+	.topnav__icon {
+		display: inline-block;
+	}
+	.fa-gg {
+		opacity: 0;
+	}
+	.foto__h1text, .saitportfolio, .myname {
+		font-size: 32px;
+	}
+	hr.line {
+		margin: 50px 120px;
+	}
+}
+/* JS - Saitbar */
+@media screen and (max-width: 624px) {
+	.responsive .topnav__li {
+		float: none;
+		display: inline;
+	}
+	.topnav__li_a {
+		display: block;
+		text-align: left;
+	}
+	.topnav__li_a:hover {
+		letter-spacing: 2px;
+	}
+}
+/* END Saitbar */
+@media screen and (max-width: 480px) {
+	.page {
+		width: 240px;
+	}
+	.foto__h1text, .saitportfolio, .myname {
+		font-size: 16px;
+	}
+	hr.line {
+		margin: 50px 50px;
+	}	
+}
+@keyframes color {
+	0% {
+		color: snow;
+	}
+	50% {
+		color: #404B9A;
+	}
+	100% {
+		color: snow;
 	}
 }
