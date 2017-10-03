@@ -1,5 +1,5 @@
 * {
-  font-family: Arial, Sans-Serif;
+  font-family: "Alice", Arial, Sans-Serif;
   margin: 0;
 }
 
@@ -13,23 +13,29 @@ body {
   background-color: #fff;
 }
 
-hr.line {
-  margin: 50px 300px;
-  padding: 0;
-  border: none;
-  border-top: medium double #D0D0D0;
-  color: #D0D0D0;
-  text-align: center;
+.hrline {
+  margin: 50px 250px;
+  border: 0;
+  height: 1px;
+  background: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.75), transparent);
+  background: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.75), transparent);
+  background: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, 0.75), transparent);
+  background: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.75), transparent);
 }
 
-hr.line:after {
-  content: 'Y';
-  display: inline-block;
-  position: relative;
-  top: -0.7em;
-  font-size: 1.5em;
-  padding: 0 0.25em;
-  background: #fff;
+#scrollTop {
+  position: fixed;
+  opacity: 0;
+  bottom: 20px;
+  right: 20px;
+  transition: all 0.5s ease-in;
+  z-index: 999;
+  color: #404B9A;
+  cursor: pointer;
+}
+
+#scrollTop:hover {
+  color: aqua;
 }
 
 /* HEADER BEGIN */
@@ -68,19 +74,18 @@ hr.line:after {
 
 .topnav__li_a {
   display: inline-block;
-  color: #e0e0e0;
+  color: #fff;
   text-align: center;
   padding: 15px;
   text-decoration: none;
   transition: 0.3s;
   font-size: 16px;
-  text-shadow: 1px 1px 1px #000;
+  text-shadow: 1px 1px 0px #000;
+  transition: 0.8s;
 }
 
 .topnav__li_a:hover {
   background-color: #404B9A;
-  color: #fff;
-  transition: 1s;
 }
 
 /* HEADER END */
@@ -95,13 +100,11 @@ hr.line:after {
 }
 .foto__h1text, .spanhtml {
   letter-spacing: 10px;
-  font-size: 56px;
-  font-family: "Alice", Arial, Sans-Serif;
+  font-size: 52px;
   text-shadow: 2px 2px 3px grey;
 }
 
 .saitportfolio, .myname {
-  font-family: "Alice", Arial, Sans-Serif;
   letter-spacing: 5px;
   font-size: 32px;
   line-height: 100px;
@@ -142,7 +145,6 @@ hr.line:after {
 
 .ptext, .ptext__span {
   line-height: 25px;
-  font-family: "Alice", Arial, Sans-Serif;
   text-align: center;
   color: #555;
   font-size: 20px;
@@ -152,33 +154,44 @@ hr.line:after {
   color: #333;
 }
 
+/* Skills */
 .skills {
+  background: url(../img/brickwall.png);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 50px 0;
-}
-.skills__blocks {
-  width: 200px;
+  box-shadow: 0px 0px 20px 0px #bbb;
 }
 
-.blocks {
+.skillblock {
+  width: 200px;
   text-align: center;
 }
-.blocks__h2 {
-  font-family: "Pattaya-Regular", Arial, Sans-Serif;
-  margin: 10px;
-  letter-spacing: 2px;
-}
-.blocks__p {
-  color: #555;
-}
-
-/* Skills */
-.blocks__skillsimg {
+.skillblock__img {
   width: 100px;
   height: 100px;
   margin: 10px 50px;
+}
+.skillblock__h3 {
+  font-family: "Pattaya-Regular", Arial, Sans-Serif;
+  font-weight: 24px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  color: #404B9A;
+}
+.skillblock__p {
+  padding-bottom: 10px;
+  color: #777;
+  font-size: 14px;
+  opacity: 0;
+  transition: 0.5s;
+  transform: rotateY(90deg);
+}
+
+.skillblock:hover .skillblock__p {
+  opacity: 1;
+  transform: rotateY(0deg);
 }
 
 .skillsimg1 {
@@ -229,9 +242,148 @@ hr.line:after {
   background: url(../img/bootstrap.png);
 }
 
+.rezume {
+  width: 100%;
+  text-align: center;
+}
+.rezume__a {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #404B9A;
+  height: 50px;
+  width: 220px;
+  border-radius: 20px;
+  padding-top: 25px;
+  color: #404B9A;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+.rezume__a:hover {
+  background-color: #404B9A;
+  color: #fff;
+}
+
+/* Skills end*/
+/* My work */
+.proektp {
+  padding: 0 40px;
+}
+
+.myproject {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  box-shadow: 0px 5px 20px 2px #bbb;
+  overflow: hidden;
+}
+.myproject__block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 1s;
+  color: #fff;
+}
+.myproject__block_a {
+  display: inline-block;
+  background: #fff;
+  border: 2px solid #404B9A;
+  border-radius: 20px;
+  height: 33px;
+  width: 80px;
+  margin-top: 20px;
+  transition: 1s;
+  animation: color 5s ease-in-out infinite;
+}
+
+.myproject:hover .myproject__block {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.myproject__block_a:hover {
+  background: #000;
+}
+
+.myproject_1 {
+  background: url(../img/site-1.png);
+}
+
+.myproject_2 {
+  background: url(../img/site-2.png);
+}
+
+/* My work end */
+/* Kontakt */
+.kontactBlock, .project {
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+.kontactBlock__li {
+  list-style: none;
+  width: 200px;
+  height: 100px;
+}
+.kontactBlock__h4 {
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+.kontactBlock__p {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.facolor {
+  color: #404B9A;
+}
+
+/* Kontakt end */
+/* Site foter */
+.siteFoter {
+  width: 100%;
+  height: 70px;
+  background: url(../img/pw_maze_black.png);
+}
+.siteFoter__div {
+  width: 980px;
+  margin: 0 auto;
+}
+.siteFoter__li {
+  float: left;
+}
+
+.siteFoter_ul {
+  width: 210px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.foterli {
+  list-style: none;
+}
+
+.otherContact {
+  padding: 10px 25px 10px 0px;
+  color: #fff;
+}
+
+.otherContact:hover {
+  color: #404B9A;
+}
+
 /* MEDIA */
 @media screen and (max-width: 980px) {
-  .page {
+  .page, .siteFoter__div {
     width: 604px;
   }
 
@@ -239,12 +391,16 @@ hr.line:after {
     font-size: 42px;
   }
 
-  hr.line {
-    margin: 50px 160px;
+  .foto {
+    background: url(../img/fotoXxs.jpg) center center no-repeat;
+  }
+
+  .hrline {
+    margin: 50px 100px;
   }
 }
 @media screen and (max-width: 624px) {
-  .page {
+  .page, .siteFoter__div {
     width: 460px;
   }
 
@@ -267,10 +423,6 @@ hr.line:after {
   .foto__h1text, .spanhtml, .saitportfolio, .myname, .myname {
     font-size: 32px;
   }
-
-  hr.line {
-    margin: 50px 120px;
-  }
 }
 /* JS - Saitbar */
 @media screen and (max-width: 624px) {
@@ -290,16 +442,16 @@ hr.line:after {
 }
 /* END Saitbar */
 @media screen and (max-width: 480px) {
-  .page {
-    width: 240px;
+  .page, .siteFoter__div {
+    width: 280px;
   }
 
   .foto__h1text, .spanhtml, .saitportfolio, .myname, .myname {
     font-size: 16px;
   }
 
-  hr.line {
-    margin: 50px 50px;
+  .hrline {
+    margin: 50px;
   }
 }
 @keyframes color {
