@@ -7,14 +7,6 @@ function myFunction () {
 	}
 };
 // Scrol
-window.onscroll = function () {
-	var scrollElem = document.getElementById('scrollTop');
-	if(document.body.scrollTop < document.documentElement.clientHeight) {
-		scrollElem.style.opacity = "1";
-	} else {
-		scrollElem.style.opacity = "0";
-	}
-};
 var timeOut;
 function goUP() {
 	var top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
@@ -22,5 +14,15 @@ function goUP() {
 		window.scrollBy(0, -100);
 		timeOut = setTimeout('goUP()', 20);
 	} else clearTimeout(timeOut);
-}
+};
+
+var stopTime;
+function goDown() {
+	var toper = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+	if (toper<700) {
+		window.scrollBy(0, 10);
+		stopTime = setTimeout('goDown()', 10);
+	} else clearTimeout(stopTime);
+};
+
 
